@@ -2,7 +2,6 @@
 
 export default function Progress({title, percentage}){
 
-    console.log(percentage)
     return (
         <div className="progress_bar">
             <label>{title} <span>{percentage}</span></label>

@@ -1,10 +1,8 @@
 import { HiArrowTopRightOnSquare } from "react-icons/hi2";
 
 export default function Card({img, title, description, labelStatus, link}){
-
     let techs;
-    techs = labelStatus.stacks.map(item => <span key={item}>{item}</span>) 
- 
+    techs = labelStatus?.stacks.map(item => <span key={item}>{item}</span>) 
     return (
         <div className="porto_card">
             <a href={link} target="_blank"><img src={img} alt="" /></a>
@@ -18,7 +16,7 @@ export default function Card({img, title, description, labelStatus, link}){
                     </a>
 
                     {
-                        labelStatus.state && <div className="tech">{techs}</div>
+                       labelStatus?.state && <div className="tech">{techs}</div>
                     }
                     
                 </div>

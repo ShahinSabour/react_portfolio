@@ -11,6 +11,7 @@ export default function ResumeCard({myData}){
                         <div className="card_seperator"></div>
                         <p className="card_description">
                             {item.des}
+                            
                         </p> 
                     </div>
     })

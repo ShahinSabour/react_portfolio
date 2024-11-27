@@ -56,7 +56,7 @@ body{
         display: block;
     }
 }
-
+  
 
 .responsive_menu{
     position: fixed;
@@ -134,12 +134,12 @@ body{
 }
 
 .menu{
-    display: inline-flex;
-    width: 100%;
-    justify-content: flex-start;
     align-items: center;
+    display: inline-flex;
+    flex-direction: row;
     height: 100%;
-    flex-direction: row-reverse;
+    justify-content: flex-end;
+    width: 100%;
     @media only screen and (max-width:768px){
         display: none;
     }

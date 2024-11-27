@@ -5,14 +5,14 @@ import { FaJs } from "react-icons/fa";
 import { FaReact } from "react-icons/fa";
 
 
-export default function Social({title, state}){
+export default function Social({title, state, data}){
     let content;
 
-    if (state == 'on'){
+    if (state === 'on'){
         content = <div class="social_links">
-                    <a href="https://www.instagram.com/shahin__sab/" target="_blank"><FaInstagram /></a>
-                    <a href="https://www.linkedin.com/in/shahin-sabour/" target="_blank"><FaLinkedinIn /></a>
-                    <a href="https://github.com/ShahinSabour" target="_blank"><FaGithub /></a>
+                    <a href={data?.instagram} target="_blank"><FaInstagram /></a>
+                    <a href={data?.linkedin} target="_blank"><FaLinkedinIn /></a>
+                    <a href={data?.github} target="_blank"><FaGithub /></a>
                 </div>;
     }else{
         content = <div class="social_links">

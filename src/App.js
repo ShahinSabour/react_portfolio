@@ -1,4 +1,3 @@
-import './App.css';
 import './style.css';
 import Header from './components/header/Header';
 import Banner from './components/header/Banner';
