@@ -1,6 +1,7 @@
 import Card from "./Card"
 import DisplayTitle from "./DisplayTitle"
 import client from '../../assets/img/p1_client.png'
+import client2 from '../../assets/img/p2.png'
 import hoisting from '../../assets/img/hoisting.png'
 import { useEffect, useState } from "react"
 import { collection, getDocs } from "firebase/firestore"
@@ -12,8 +13,15 @@ const cardInfo = [
         title: 'Dashboard designing',
         description: 'Crafting +10-Page Dashboard: Solving Development Challenges',
         link: "https://p1-client.vercel.app/",
-        labelStatus: { state: '', stacks: ['JavaScript','jQuery','Scss','Html5'] }
+        labelStatus: { state: '', stacks: ['JavaScript','jQuery','Scss','Html5'] }    
     },
+    {
+        img: client2,
+        title: 'SatDl Project',
+        description: 'Streamlined 7-page website for effortless file upload and download',
+        link: "https://js-satdl-project.vercel.app/",
+        labelStatus: { state: '', stacks: ['JavaScript','jQuery','Scss','Html5'] }
+    }
 ]
 
 const cardInfoBlog = [
@@ -28,7 +36,7 @@ const cardInfoBlog = [
      
 export default function DisplayCard({text, title, section}){
 
-    const [dataSample, setDataSample] = useState()
+    const [dataSample, setDataSample] = useState([])
     const [dataBlog, setDataBlog] = useState()
     const [isLoaing, setIsLoading] = useState()
     const [error, setError] = useState()
@@ -37,7 +45,10 @@ export default function DisplayCard({text, title, section}){
         setIsLoading(true)
         setError(false)
         try{
+
             const ref = collection(db, collectionName)
+            console.log(ref)
+
             const snapshot = await getDocs(ref)
             if(snapshot.empty){
                 setDataSample('No Data ...')
@@ -65,8 +76,6 @@ export default function DisplayCard({text, title, section}){
         setDataBlog('blog')
     }, [])
 
-    let workSamples = dataSample?.[0].info || {};
-    
     return (
         <div className="portfolio container mx-auto">
             <DisplayTitle
@@ -74,13 +83,12 @@ export default function DisplayCard({text, title, section}){
                 text={text}
                 title={title}
             />
-            <div className="grid lg:grid-cols-3 lg:gap-3 sm:grid-cols-2 sm:gap-4 grid-cols-1">
+            <div className="grid lg:grid-cols-3 lg:gap-10 md:grid-cols-2 md:gap-4 grid-cols-1">
                 {(section === 'portfolio') ? (
                     <>
                         {
-                            cardInfo.map((item, key) => <span key={key}><Card {...item} /> </span>)
-                            //console.log(workSamples)<span key={key}><Card {...item} /> </span> 
-                            // workSamples === undefined ? {} : Object.entries(workSamples).map(([item, key]) => <span key={key}><Card {...item} /> </span>)
+                            cardInfo.map((item, key) => <Card  key={key} {...item} />)
+                            // dataSample.map((item, index) => <Card key={index} />)
                         }
                     </>
                 ) : ''}
@@ -88,7 +96,7 @@ export default function DisplayCard({text, title, section}){
                 {(section === 'blog') ? (
                     <>
                         {
-                            cardInfoBlog.map((item, key) => <span key={key}><Card {...item} /> </span>)
+                            cardInfoBlog.map((item, key) => <Card key={key} {...item} />)
                             // Object.entries(sampleContent).map(([item, key]) => <span key={key}><Card {...item} /> </span>)
                         }
                     </>

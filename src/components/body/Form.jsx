@@ -19,8 +19,8 @@ export default function From(){
                 <Input title='Email' />
                 <Input title='Subject' />
                 
-                <div class="full">
-                    <label for="message">your message</label>
+                <div className="full">
+                    <label>your message</label>
                     <textarea name="" id="message"></textarea>
                 </div> 
 

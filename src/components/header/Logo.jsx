@@ -1,9 +1,9 @@
 import profileImage from '../../assets/img/profile.jpg'
 
-export default function Logo({title, copyWrite}){
+export default function Logo({title, copyWrite, state}){
     return (
         <div className="logo lg:col-span-2 md:col-span-2 sm:col-span-1 col-span-1">
-            <a href=''>
+            <a href='' className={state === 'header' ? 'float-left' : ''}>
                 <img src={profileImage} alt="Shahin Sabour" />
             </a>
             {title && <div className="title_img">{title}</div>}

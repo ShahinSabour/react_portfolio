@@ -24,14 +24,16 @@ export default function Header({section}){
     const handleRemove = () => {}
 
     return (
-        <div className={activeHeader + ` px-30 mx-auto`} id={section}  >
-            <header className="header grid md:grid-cols-12 md:gap-4 grid-cols-2">
-                <Logo title='' copyWrite='' />
-                <ul  className="menu col-span-10 lg:pr-10">
-                    <Menu handleRemove={handleRemove} />
-                </ul>
-                <Responsive />
-            </header>
+        <div className="container mx-auto">
+            <div className={activeHeader + ` px-30 mx-auto`} id={section}  >
+                <header className="header grid md:grid-cols-12 md:gap-0 grid-cols-2">
+                    <Logo title='' copyWrite='' state="header" />
+                    <ul  className="menu col-span-10 lg:pr-10">
+                        <Menu handleRemove={handleRemove} />
+                    </ul>
+                    <Responsive />
+                </header>
+            </div>
         </div>
     )
 }

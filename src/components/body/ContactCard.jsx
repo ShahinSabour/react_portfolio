@@ -38,10 +38,9 @@ export default function ContactCard(){
         fetchData('personal_info')
     }, [])
 
-    
+
     return (
         <div className="contact_card lg:col-span-1 md:col-span-2">
-            {data[0]?.name || "Unnamed Contact"}
             <div className="img"><img src={contactImg} alt="" /></div>
             <div className="title">{data[0]?.name || "Unnamed name"}</div>
             <p>I am available for freelance work. Connect with me via and call in to my account.</p>
