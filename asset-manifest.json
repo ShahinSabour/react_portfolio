@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/react_portfolio/static/css/main.df11160b.css",
-    "main.js": "/react_portfolio/static/js/main.1ac8675d.js",
+    "main.js": "/react_portfolio/static/js/main.3f7a0160.js",
     "static/js/453.0a36081d.chunk.js": "/react_portfolio/static/js/453.0a36081d.chunk.js",
     "static/media/p2.png": "/react_portfolio/static/media/p2.95c8562a53952be2f616.png",
     "static/media/p1_client.png": "/react_portfolio/static/media/p1_client.eac5d2508d90fa3fb4ec.png",
@@ -12,11 +12,11 @@
     "static/media/IRANSansWeb_Bold.woff": "/react_portfolio/static/media/IRANSansWeb_Bold.dd12fb6add9534790d36.woff",
     "index.html": "/react_portfolio/index.html",
     "main.df11160b.css.map": "/react_portfolio/static/css/main.df11160b.css.map",
-    "main.1ac8675d.js.map": "/react_portfolio/static/js/main.1ac8675d.js.map",
+    "main.3f7a0160.js.map": "/react_portfolio/static/js/main.3f7a0160.js.map",
     "453.0a36081d.chunk.js.map": "/react_portfolio/static/js/453.0a36081d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.df11160b.css",
-    "static/js/main.1ac8675d.js"
+    "static/js/main.3f7a0160.js"
   ]
 }
