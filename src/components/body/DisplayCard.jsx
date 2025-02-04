@@ -23,7 +23,7 @@ const cardInfo = [
         link: "https://samanchap.com/",
         labelStatus: { state: '', stacks: ['JavaScript','jQuery','Scss','Html5'] }
     }
-]
+] 
 
 const cardInfoBlog = [
     {
