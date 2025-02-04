@@ -8,6 +8,6 @@ export default function Footer(){
             <Logo title='mybio' copyWrite='© 2024' />
             <ToUp />
             <UseFirebase />
-        </footer>
+        </footer> 
     )
 }
